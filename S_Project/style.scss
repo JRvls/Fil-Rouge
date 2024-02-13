@@ -1,4 +1,5 @@
 nav {
+    background-color: #212121;
     display: grid;
     grid-template-columns: 10% 80% 10%;
     align-items: center;
@@ -13,6 +14,7 @@ nav ul {
 }
 
 li {
+    color: aliceblue;
     list-style: none;
 }
 
