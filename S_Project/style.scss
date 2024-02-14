@@ -7,6 +7,9 @@ nav {
         width: 70px;
         height: 70px;
     }
+    .sidenav {
+        display: none;
+    }
     @media (min-width: 540px){
         menu,
         ul {
