@@ -5,88 +5,171 @@
 
 html {
   font-size: 10px;
+  background-color: #fbfbfb;
 }
 
 body {
   font-size: 1.6rem;
+  height: 5000px;
 }
 
-.container {
-  display: flex;
-  align-items: end;
-}
-
-nav {
-  width: 100%;
-  background-color: #eee;
+header {
   display: grid;
-  grid-template-columns: 15% 65% 35%;
+  grid-template: 20% 20% 20% 20% 20%;
+  height: 14rem;
+  margin-top: 2.5rem;
+}
+header #container {
+  height: 14rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #f4f4f4;
+  margin-top: 0.5rem;
+}
+header #container #logoImg {
+  margin: 1rem 0;
+  width: 12rem;
+  transition: 0.2s ease;
+}
+header #container #logoImg:hover {
+  transform: scale(1.2);
+}
+header #container ul {
+  width: 60rem;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 20px 0;
-  font-size: 1.8rem;
+}
+header #container ul li {
+  justify-content: space-evenly;
+  list-style: none;
+  font-size: 2.2rem;
   letter-spacing: 0.2rem;
   font-weight: 700;
-}
-nav img {
-  height: 80px;
-  margin: 10px 30px;
-}
-
-ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  width: 400px;
-  margin-left: 5rem;
-}
-ul li {
-  list-style: none;
-}
-
-a {
-  display: flex;
-  text-decoration: none;
-  color: #333;
   transition: 0.2s ease;
 }
-a:hover {
+header #container ul li a {
+  text-decoration: none;
+  color: #212121;
+}
+header #container ul li:hover {
   transform: scale(1.2);
 }
-
-#closeBtn {
+header #container #burgerImg {
   display: none;
 }
-
-#divIconNav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 2rem;
-}
-#divIconNav #favorisImg {
-  width: 4.8rem;
-}
-#divIconNav #panierImg {
-  width: 3.2rem;
-}
-#divIconNav #searchImg {
-  width: 2.5rem;
-}
-#divIconNav #compteImg {
-  width: 3.2rem;
-}
-#divIconNav img {
-  height: 100%;
+header #container #compteImg {
+  width: 4.7rem;
+  align-self: center;
   transition: 0.2s ease;
-  margin: 0 30px;
 }
-#divIconNav img:hover {
+header #container #compteImg:hover {
+  transform: scale(1.2);
+}
+header #container #searchDiv {
+  display: none;
+}
+header #container #searchDiv #searchImg {
+  width: 5.5rem;
+  align-self: center;
+}
+header #container #favorisImg {
+  width: 6.9rem;
+  margin-top: 0.1rem;
+  align-self: center;
+  transition: 0.2s ease;
+}
+header #container #favorisImg:hover {
+  transform: scale(1.2);
+}
+header #container #panierImg {
+  width: 4.2rem;
+  margin-bottom: 0.3rem;
+  align-self: center;
+  transition: 0.2s ease;
+}
+header #container #panierImg:hover {
   transform: scale(1.2);
 }
 
-@media screen and (max-width: 1000px) {
-  nav ul {
+@media (max-width: 1000px) {
+  header {
+    display: grid;
+    grid-template: 20% 20% 20% 20% 20%;
+  }
+  header #container {
+    height: 10rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 15rem;
+    background-color: #f4f4f4;
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+  header #container #logoImg {
     display: none;
+    margin: 1rem 0;
+    width: 12rem;
+    transition: 0.2s ease;
+  }
+  header #container #logoImg:hover {
+    transform: scale(1.2);
+  }
+  header #container ul {
+    display: none;
+    width: 25rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  header #container ul li {
+    display: none;
+    list-style: none;
+    transition: 0.2s ease;
+  }
+  header #container ul li a {
+    text-decoration: none;
+    color: #212121;
+  }
+  header #container ul li:hover {
+    transform: scale(1.2);
+  }
+  header #container #burgerImg {
+    display: block;
+    width: 4.5rem;
+    align-self: center;
+  }
+  header #container #compteImg {
+    width: 4.7rem;
+    align-self: center;
+  }
+  header #container #searchDiv {
+    display: flex;
+    background-color: #fbfbfb;
+    border-radius: 50%;
+    justify-content: center;
+    width: 8rem;
+    height: 8rem;
+    margin-top: 1rem;
+  }
+  header #container #searchDiv #searchImg {
+    width: 5.5rem;
+    align-self: center;
+  }
+  header #container #favorisImg {
+    width: 6.9rem;
+    margin-top: 0.1rem;
+    align-self: center;
+  }
+  header #container #panierImg {
+    width: 4.2rem;
+    margin-bottom: 0.3rem;
+    align-self: center;
   }
 }/*# sourceMappingURL=style.css.map */
