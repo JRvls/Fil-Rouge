@@ -11,45 +11,82 @@ body {
   font-size: 1.6rem;
 }
 
+.container {
+  display: flex;
+  align-items: end;
+}
+
 nav {
+  width: 100%;
   background-color: #eee;
   display: grid;
-  grid-template-columns: 10% 80% 10%;
+  grid-template-columns: 15% 65% 35%;
   align-items: center;
-  margin: 10px 0;
+  margin: 20px 0;
   font-size: 1.8rem;
   letter-spacing: 0.2rem;
   font-weight: 700;
 }
 nav img {
-  width: 90px;
   height: 80px;
-  margin: 5px 5px;
+  margin: 10px 30px;
 }
-nav div {
-  height: 100%;
-}
-nav ul {
+
+ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
-  backface-visibility: hidden;
+  width: 400px;
+  margin-left: 5rem;
 }
-nav ul li {
+ul li {
   list-style: none;
-  backface-visibility: hidden;
 }
-nav a {
-  display: block;
+
+a {
+  display: flex;
   text-decoration: none;
   color: #333;
-  transition: 0.6s ease;
-  backface-visibility: hidden;
+  transition: 0.2s ease;
 }
-nav a:hover {
+a:hover {
   transform: scale(1.2);
 }
-nav #closeBtn {
+
+#closeBtn {
   display: none;
+}
+
+#divIconNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 2rem;
+}
+#divIconNav #favorisImg {
+  width: 4.8rem;
+}
+#divIconNav #panierImg {
+  width: 3.2rem;
+}
+#divIconNav #searchImg {
+  width: 2.5rem;
+}
+#divIconNav #compteImg {
+  width: 3.2rem;
+}
+#divIconNav img {
+  height: 100%;
+  transition: 0.2s ease;
+  margin: 0 30px;
+}
+#divIconNav img:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 1000px) {
+  nav ul {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
