@@ -1,14 +1,30 @@
-let sidenav = document.getElementById("mySideNav");
-let openBtn = document.getElementById("openBtn");
-let closeBtn = document.getElementById("closeBtn");
+let sideNav = document.querySelector("#navList");
+console.log(sideNav);
 
-openBtn.onclick = openNav;
-closeBtn.onclick = closeNav;
+let btnBurger = document.querySelector("#burgerImg");
+console.log(btnBurger);
 
-function openNav() {
-    sidenav.classList.add("active");
-}
+let navMobile = document.querySelector(".nav-list-mobile");
 
-function closeNav() {
-    sidenav.classList.remove("active");
-}
+
+btnBurger.addEventListener("click", () => {
+    if (sideNav.style.display === "none") {
+        navMobile.style.right = "0";
+        sideNav.style.display = "block";
+        console.log(sideNav.style.display);
+    } else {
+        navMobile.style.right = "-100%";
+        setTimeout(()=>{
+            sideNav.style.display = "none";
+        }, 500);
+    }
+});
+
+sideNav.addEventListener("click", () => {
+    if (sideNav.style.display === "block") {
+        navMobile.style.right = "-100%";
+        setTimeout(()=>{
+            sideNav.style.display = "none";
+        }, 500);
+    }
+});
