@@ -54,42 +54,52 @@ header {
                 }
             }
         }
-        #burgerImg {
-            display: none;
-        }
-        #compteImg {
-            width: 4.7rem;
-            align-self: center;
-            transition: .2s ease;
-            &:hover {
-                transform: scale(1.2);
+        #iconDiv {
+            display: flex;
+            justify-content: space-evenly;
+            width: 25rem;
+            margin: 0.5rem;
+            #burgerImg {
+                display: none;
             }
-        }
-        #searchDiv {
-            display: none;
-            #searchImg {
-                width: 5.5rem;
+            #compteImg {
+                width: 4.7rem;
                 align-self: center;
+                margin: 1rem;
+                transition: .2s ease;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+            #searchDiv {
+                display: none;
+                #searchImg {
+                    width: 5.5rem;
+                    align-self: center;
+                }
+            }
+            #favorisImg{
+                width: 6.5rem;
+                height: 3.5rem;
+                margin: 0.1rem 0;
+                padding: 0;
+                align-self: center;
+                transition: .2s ease;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+            #panierImg{
+                width: 4.2rem;
+                margin: 1rem;
+                align-self: center;
+                transition: .2s ease;
+                &:hover {
+                    transform: scale(1.2);
+                }
             }
         }
-        #favorisImg{
-            width: 6.9rem;
-            margin-top: 0.1rem;
-            align-self: center;
-            transition: .2s ease;
-            &:hover {
-                transform: scale(1.2);
-            }
-        }
-        #panierImg{
-            width: 4.2rem;
-            margin-bottom: 0.3rem;
-            align-self: center;
-            transition: .2s ease;
-            &:hover {
-                transform: scale(1.2);
-            }
-        }
+        
     }
 }
 
@@ -138,37 +148,45 @@ header {
                     }
                 }
             }
-            #burgerImg {
-                display: block;
-                width: 4.5rem;
-                align-self: center;
-            }
-            #compteImg {
-                width: 4.7rem;
-                align-self: center;
-            }
-            #searchDiv {
+            #iconDiv {
                 display: flex;
-                background-color: #fbfbfb;
-                border-radius: 50%;
-                justify-content: center;
-                width: 8rem;
-                height: 8rem;
-                margin-top: 1rem;
-                #searchImg {
-                    width: 5.5rem;
+                justify-content: space-evenly;
+                width: 100%;
+                #burgerImg {
+                    display: block;
+                    width: 4.5rem;
                     align-self: center;
                 }
-            }
-            #favorisImg{
-                width: 6.9rem;
-                margin-top: 0.1rem;
-                align-self: center;
-            }
-            #panierImg{
-                width: 4.2rem;
-                margin-bottom: 0.3rem;
-                align-self: center;
+                #compteImg {
+                    width: 4.7rem;
+                    align-self: center;
+                }
+                #searchDiv {
+                    display: flex;
+                    background-color: #fbfbfb;
+                    border-radius: 50%;
+                    justify-content: center;
+                    width: 8rem;
+                    height: 8rem;
+                    margin-top: 0.5rem;
+                    #searchImg {
+                        width: 5.5rem;
+                        align-self: center;
+                    }
+                }
+                #favorisImg{
+                    width: 6.5rem;
+                    height: 3.5rem;
+                    margin: 0.1rem 0;
+                    padding: 0;
+                    margin-top: 0.1rem;
+                    align-self: center;
+                }
+                #panierImg{
+                    width: 4.2rem;
+                    margin: 1rem;
+                    align-self: center;
+                }
             }
         }
     }
