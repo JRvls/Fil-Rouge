@@ -6,9 +6,14 @@
     right: 0;
   }
 }
+@font-face {
+  font-family: "paint";
+  src: url(Font/Painter\ Dude.ttf);
+}
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -20,11 +25,20 @@ body {
   font-size: 1.6rem;
   height: 5000px;
 }
+body h3 {
+  display: flex;
+  color: #fff;
+  width: 100%;
+  justify-content: center;
+}
 
 header {
   display: flex;
   height: 14rem;
-  margin-top: 2.5rem;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 0;
 }
 header #container {
   height: 14rem;
@@ -32,10 +46,9 @@ header #container {
   display: flex;
   justify-content: space-evenly;
   background-color: #f4f4f4;
-  margin-top: 0.5rem;
 }
 header #container #logoImg {
-  margin: 1rem 0;
+  margin: 1.3rem 0;
   width: 12rem;
   transition: 0.2s ease;
 }
@@ -107,6 +120,111 @@ header #container #iconDiv #panierImg {
 }
 header #container #iconDiv #panierImg:hover {
   transform: scale(1.2);
+}
+
+.section-promo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 70rem;
+  width: 100%;
+  margin-top: 22rem;
+  background: url(Picture/star.png) #212121;
+}
+.section-promo #titlePromo {
+  display: block;
+  margin-top: 1rem;
+  height: 20%;
+  font-family: "paint";
+  color: #f4f4f4;
+  font-size: 10rem;
+}
+.section-promo .h3-promo {
+  position: relative;
+  padding-bottom: 8rem;
+}
+.section-promo .wrapper {
+  display: block;
+  width: 100%;
+  padding: 0 2rem;
+  margin-bottom: 15rem;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+.section-promo .wrapper .item {
+  width: 30%;
+  display: inline-block;
+  margin-top: 2rem;
+}
+.section-promo .wrapper .item .polaroid {
+  background: #fbfbfb;
+  padding: 1rem;
+  box-shadow: 0 0.2rem 1.2rem rgba(255, 255, 255, 0.781);
+}
+.section-promo .wrapper .item .polaroid img {
+  max-width: 100%;
+  height: auto;
+}
+.section-promo .wrapper .item .polaroid .caption {
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 2em;
+}
+.section-promo .wrapper .item .polaroid:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.35s;
+}
+.section-promo .wrapper .item:nth-of-type(4n+1) {
+  transform: scale(0.8, 0.8) rotate(5deg);
+  transition: all 0.35s;
+}
+.section-promo .wrapper .item:nth-of-type(4n+1) .polaroid:before {
+  transform: rotate(6deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  right: 12px;
+}
+.section-promo .wrapper .item:nth-of-type(4n+2) {
+  transform: scale(0.8, 0.8) rotate(-5deg);
+  transition: all 0.35s;
+}
+.section-promo .wrapper .item:nth-of-type(4n+2) .polaroid:before {
+  transform: rotate(-6deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  left: 12px;
+}
+.section-promo .wrapper .item:nth-of-type(4n+3) {
+  transform: scale(0.8, 0.8) rotate(-3deg);
+  transition: all 0.35s;
+}
+.section-promo .wrapper .item:nth-of-type(4n+3) .polaroid:before {
+  transform: rotate(-4deg);
+  height: 20%;
+  width: 47%;
+  bottom: 30px;
+  left: 12px;
+}
+.section-promo .wrapper .item:hover {
+  filter: none;
+  transform: scale(1, 1) rotate(0deg) !important;
+  transition: all 0.35s;
+}
+.section-promo .wrapper .item:hover .polaroid:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transform: rotate(0deg);
+  height: 90%;
+  width: 90%;
+  bottom: 0%;
+  right: 5%;
+  transition: all 0.35s;
 }
 
 @media (max-width: 1000px) {
@@ -242,5 +360,8 @@ header #container #iconDiv #panierImg:hover {
   }
   header .bg-opacity .nav-list-mobile li a:hover {
     transform: scale(1.2);
+  }
+  .section-promo {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
